@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://dc4gx5vyyx3uk"]
+
+[ext_resource type="Texture2D" uid="uid://dp3vapitqhc5y" path="res://Art/Terrain/rotor.png" id="1_dcskv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_el178"]
+size = Vector2(48, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yqvy4"]
+size = Vector2(16, 48)
+
+[node name="AnimatableBody2D" type="AnimatableBody2D"]
+
+[node name="Rotor" type="Sprite2D" parent="."]
+texture = ExtResource("1_dcskv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-32, 0)
+shape = SubResource("RectangleShape2D_el178")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+position = Vector2(32, 0)
+shape = SubResource("RectangleShape2D_el178")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(0, -32)
+shape = SubResource("RectangleShape2D_yqvy4")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="."]
+position = Vector2(0, 33)
+shape = SubResource("RectangleShape2D_yqvy4")
